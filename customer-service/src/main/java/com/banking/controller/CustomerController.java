@@ -31,18 +31,4 @@ public class CustomerController
         log.info("Getting customer by customerId {}", customerId);
         return ResponseEntity.ok(customerService.getCustomer(customerId));
     }
-
-   /* @GetMapping(value = "/{customerId}/account")
-    public ResponseEntity getCustomerAccounts(@PathVariable("customerId") String customerId)
-    {
-        log.info("Getting customer accounts by customerId {}", customerId);
-        return ResponseEntity.ok(customerService.getCustomerAccounts(customerId));
-    }*/
-
-    @GetMapping(value = "/{customerId}/transaction")
-    public ResponseEntity getAllInformation(@PathVariable("customerId") String customerId)
-    {
-        log.info("Reading customer by customerId {}", customerId);
-        return ResponseEntity.ok(customerService.getCustomer(customerId));
-    }
 }
